@@ -1,0 +1,7 @@
+# Build output
+build/
+mini-shell
+
+# Files created when running the shell
+*.log
+examples/vmem/my_swap.bin

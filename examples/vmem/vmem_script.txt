@@ -1,0 +1,19 @@
+my_program.bin my_swap.bin 64 32 16 48 8 20 40 80
+load 0
+load 8
+load 64
+store 100 A
+store 112 B
+load 120
+store 130 C
+load 72
+load 104
+load 100
+load 101
+load 8
+store 10 X
+load 500
+print table
+print tlb
+print swap
+print ram

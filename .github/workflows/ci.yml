@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install valgrind
+        run: sudo apt-get update && sudo apt-get install -y valgrind
+
+      - name: Build (warnings are errors)
+        run: make CFLAGS="-O2 -g -Werror"
+
+      - name: End-to-end tests
+        run: make test
+
+      - name: Memory check
+        run: make valgrind

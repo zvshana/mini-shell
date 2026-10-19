@@ -1,0 +1,4 @@
+# Keep LF line endings so the shell scripts and Makefile work on Linux,
+# even when the repository is checked out on Windows.
+* text=auto eol=lf
+*.bin binary
